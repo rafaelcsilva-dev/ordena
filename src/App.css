@@ -1,0 +1,36 @@
+:root {
+  --bg-dark: #121214;
+  --bg-sidebar: #0a0a0c;
+  --bg-card: #1a1a22;
+
+  --text-main: #ffffff;
+  --text-muted: #8a8a98;
+
+  --accent-color: #5865f2;
+  --accent-hover: #4752c4;
+  --border-color: #262630;
+
+  /*Tipografia*/
+  --text-small: 0.75rem;
+  --text-body: 1rem;
+  --text-h3: 1.25rem;
+  --text-h2: 1.5rem;
+  --text-h1: 2rem;
+  --text-display: 2.5rem;
+
+  --font: "Courier New", Courier, monospace;
+
+  /*Espaçamentos*/
+  --s1: 0.25rem; /*4*/
+  --s2: 0.5rem; /*8*/
+  --s3: 1rem; /*16*/
+  --s4: 1.5rem; /*24*/
+  --s5: 2rem; /*32*/
+  --s6: 3rem; /*48*/
+  --s7: 4rem; /*64*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

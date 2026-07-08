@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap");
+
+.ordena-bg {
+  background-color: #050608; /* Fundo ultra escuro infinito */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito de aura iluminada roxa na lateral esquerda do card */
+.glow-effect {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(
+    circle,
+    rgba(108, 92, 231, 0.12) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* O Card Principal Escuro */
+.ordena-card {
+  background-color: #0f1115; /* Tom sutilmente mais claro que o fundo geral */
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 36px; /* Bordas bem arredondadas como na imagem */
+  width: 100%;
+  max-width: 540px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* Logotipo ORDENA */
+.main-logo {
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* Subtítulo Azul */
+.main-subtitle {
+  color: #0084ff; /* Azul vivo idêntico ao mockup */
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 5px 0 35px 0;
+}
+
+/* Cápsula com Gradiente "Página em Desenvolvimento" */
+.dev-status-badge {
+  background: linear-gradient(90deg, #5c5edc 0%, #0084ff 100%);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 12px 32px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 45px;
+  box-shadow: 0 4px 20px rgba(0, 132, 255, 0.25);
+}
+
+/* Fileira de Ícones e Funcionalidades */
+.features-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 45px;
+  padding: 0 10px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #5c6066; /* Ícones em tom cinza fosco */
+}
+
+.feature-item svg {
+  stroke-width: 2.2px;
+}
+
+.feature-item span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #797d85;
+}
+
+/* Equação Matemática */
+.formula-text {
+  color: #3b3e45; /* Tom cinza escuro integrado ao card */
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.formula-text sub {
+  font-size: 0.65rem;
+  bottom: -0.2em;
+}
+
+/* Mensagem de Rodapé (Fora do card) */
+.coming-soon-text {
+  color: #5c6066;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 25px;
+  z-index: 2;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 480px) {
+  .ordena-card {
+    padding: 40px 20px;
+    border-radius: 28px;
+  }
+  .main-logo {
+    font-size: 3rem;
+  }
+  .dev-status-badge {
+    font-size: 0.75rem;
+    padding: 10px 20px;
+  }
+  .features-row {
+    gap: 10px;
+  }
+}
