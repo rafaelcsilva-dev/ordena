@@ -1,0 +1,140 @@
+.main-page {
+  display: flex;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: var(--bg-dark);
+
+  overflow: hidden;
+
+  & > aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--s4);
+
+    width: fit-content;
+    padding: var(--s4);
+
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border-color);
+
+    & > div:first-of-type {
+      display: flex;
+      align-items: center;
+      gap: var(--s3);
+
+      padding: var(--s2) var(--s3);
+
+      & img {
+        width: 18px;
+        height: 18px;
+        object-fit: contain;
+      }
+
+      & span {
+        display: flex;
+        gap: var(--s3);
+
+        color: var(--text-main);
+        font-size: var(--text-h3);
+        font-weight: 700;
+      }
+    }
+
+    & nav {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s2);
+      flex: 1;
+
+      & button {
+        display: flex;
+        align-items: center;
+        gap: var(--s3);
+
+        padding: var(--s2) var(--s3);
+
+        border-radius: 8px;
+
+        color: var(--text-muted);
+        font-size: var(--text-body);
+        font-weight: 500;
+
+        transition: all 0.2s ease;
+
+        & span:first-child {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        &:hover {
+          background-color: #ffffff0d;
+          color: var(--text-main);
+        }
+
+        &:first-child {
+          background-color: #ffffff;
+          color: #000000;
+          font-weight: 600;
+
+          & span {
+            color: #000000;
+          }
+        }
+      }
+    }
+
+    & > button:last-child {
+      display: flex;
+      align-items: center;
+      gap: var(--s3);
+
+      padding: var(--s2) var(--s3);
+      padding-top: var(--s4);
+
+      border-top: 1px solid var(--border-color);
+      border-radius: 0;
+
+      color: var(--text-muted);
+      font-size: var(--text-body);
+
+      & span:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &:hover {
+        color: var(--text-main);
+      }
+    }
+  }
+
+  & > main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--s4);
+    flex: 1;
+
+    padding: var(--s5);
+
+    overflow-y: auto;
+
+    & > header {
+      display: flex;
+      align-items: center;
+
+      width: 100%;
+      min-height: 48px;
+    }
+
+    & > section {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+}

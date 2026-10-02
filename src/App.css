@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 :root {
   --bg-dark: #121214;
   --bg-sidebar: #0a0a0c;
@@ -33,4 +35,29 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  background: none;
+  border: none;
+
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+
+  background-color: #000;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
