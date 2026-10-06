@@ -1,18 +1,10 @@
 import "./App.css";
 
 // import Home from "./components/Home/Home.tsx";
-import Main from "./components/Main/Main.tsx";
+import Main from "./pages/Main/Main.tsx";
 
 function App() {
-  return (
-    <>
-      {/*
-    <Home />
-    */}
-
-      <Main></Main>
-    </>
-  );
+  return <Main></Main>;
 }
 
 export default App;

@@ -41,6 +41,8 @@
 }
 
 button {
+  display: flex;
+  
   background: none;
   border: none;
 
