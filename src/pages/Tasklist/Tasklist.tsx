@@ -1,3 +1,9 @@
+import InDevelopment from "../../components/InDevelopment/InDevelopment";
+
 export default function Tasklist() {
-  return <span>tasklist</span>;
+  return (
+    <>
+      <InDevelopment />
+    </>
+  );
 }

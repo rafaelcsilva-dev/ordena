@@ -1,3 +1,9 @@
+import InDevelopment from "../../components/InDevelopment/InDevelopment";
+
 export default function Settings() {
-  return <span>settings</span>;
+  return (
+    <>
+      <InDevelopment />
+    </>
+  );
 }
