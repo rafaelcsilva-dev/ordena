@@ -22,12 +22,22 @@ export default function Main() {
 
   const { title, Component: CurrentPage } = PAGES[activePage];
 
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsCollapsed((prev) => !prev);
+  };
+
   return (
     <div className="main-page">
-      <aside>
+      <aside className={isCollapsed ? "collapsed" : ""}>
+        <button className="collapse-button" onClick={toggleSidebar}>
+          <Icon name={isCollapsed ? "arrow_menu_open" : "arrow_menu_close"} />
+        </button>
+
         <div>
           <img src="./public/favicon.png" alt="Ícone do Ordena" />
-          <span>Ordena</span>
+          <span className="span-colapsed">Ordena</span>
         </div>
 
         <nav>
@@ -37,7 +47,7 @@ export default function Main() {
           >
             <Icon name="dashboard" />
 
-            <span>Dashboard</span>
+            <span className="span-colapsed">Dashboard</span>
           </button>
 
           <button
@@ -46,7 +56,7 @@ export default function Main() {
           >
             <Icon name="list_alt" />
 
-            <span>Tarefas</span>
+            <span className="span-colapsed">Tarefas</span>
           </button>
 
           <button
@@ -55,7 +65,7 @@ export default function Main() {
           >
             <Icon name="view_kanban" />
 
-            <span>Projetos</span>
+            <span className="span-colapsed">Projetos</span>
           </button>
 
           <button
@@ -64,18 +74,18 @@ export default function Main() {
           >
             <Icon name="note_stack" />
 
-            <span>Notas</span>
+            <span className="span-colapsed">Notas</span>
+          </button>
+
+          <button
+            className={activePage === "settings" ? "active" : ""}
+            onClick={() => setActivePage("settings")}
+          >
+            <Icon name="settings" />
+
+            <span className="span-colapsed">Configurações</span>
           </button>
         </nav>
-
-        <button
-          className={activePage === "settings" ? "active" : ""}
-          onClick={() => setActivePage("settings")}
-        >
-          <Icon name="settings" />
-
-          <span>Configurações</span>
-        </button>
       </aside>
 
       <main>

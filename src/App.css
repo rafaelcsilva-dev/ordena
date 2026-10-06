@@ -38,11 +38,13 @@
   box-sizing: border-box;
 
   font-family: "Inter", sans-serif;
+
+  transition: all 0.3s;
 }
 
 button {
   display: flex;
-  
+
   background: none;
   border: none;
 

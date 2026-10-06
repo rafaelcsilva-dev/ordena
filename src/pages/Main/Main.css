@@ -9,33 +9,58 @@
   overflow: hidden;
 
   & > aside {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: var(--s4);
 
     width: fit-content;
-    padding: var(--s4);
+    padding: var(--s4) var(--s3);
 
     background-color: var(--bg-sidebar);
     border-right: 1px solid var(--border-color);
 
-    & > div:first-of-type {
+    & .collapse-button {
+      position: absolute;
+      right: -10px;
+
+      padding: var(--s1) 0;
+
+      background-color: var(--bg-sidebar);
+      border: 1px solid var(--border-color);
+      border-radius: var(--s1);
+
+      color: var(--border-color);
+
+      &:hover {
+        background-color: var(--bg-card);
+        color: var(--text-main);
+      }
+
+      & span {
+        font-size: 16px;
+      }
+    }
+
+    & > div {
       display: flex;
       align-items: center;
       gap: var(--s3);
 
-      padding: var(--s2) var(--s3);
+      width: 100%;
+      padding: var(--s2);
 
       & img {
-        width: 18px;
-        height: 18px;
+        width: 24px;
+        height: 24px;
         object-fit: contain;
       }
 
       & span {
         display: flex;
-        gap: var(--s3);
 
         color: var(--text-main);
         font-size: var(--text-h3);
@@ -54,7 +79,8 @@
         align-items: center;
         gap: var(--s3);
 
-        padding: var(--s2) var(--s3);
+        width: 100%;
+        padding: var(--s2);
 
         border-radius: 8px;
 
@@ -84,32 +110,17 @@
             color: #000000;
           }
         }
+
+        &:last-child {
+          margin-top: auto;
+        }
       }
     }
+  }
 
-    & > button:last-child {
-      display: flex;
-      align-items: center;
-      gap: var(--s3);
-
-      padding: var(--s2) var(--s3);
-      padding-top: var(--s4);
-
-      border-top: 1px solid var(--border-color);
-      border-radius: 0;
-
-      color: var(--text-muted);
-      font-size: var(--text-body);
-
-      & span:first-child {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      &:hover {
-        color: var(--text-main);
-      }
+  & > aside.collapsed {
+    & .span-colapsed {
+      display: none;
     }
   }
 
@@ -150,8 +161,8 @@
           color: var(--text-muted);
 
           &:hover {
-            background-color: var(--text-main);
-            color: var(--bg-card);
+            background-color: #ffffff0d;
+            color: var(--text-main);
           }
 
           & .material-symbols-outlined {
