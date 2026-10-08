@@ -1,0 +1,40 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--s4);
+
+  & header {
+    display: flex;
+    gap: var(--s4);
+
+    & .card {
+      flex: 1;
+
+      padding: var(--s3);
+
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--s2);
+
+      & span {
+        color: var(--text-main);
+        font-size: var(--text-body);
+        font-weight: 600;
+      }
+
+      & div {
+        display: flex;
+        justify-content: center;
+
+        margin-top: var(--s4);
+
+        & span {
+          color: var(--text-muted);
+          font-size: var(--text-small);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

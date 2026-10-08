@@ -1,0 +1,126 @@
+.weekly-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+  padding: var(--s4);
+
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--s3);
+
+  color: var(--text-main);
+  overflow-x: auto;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--border-color);
+
+    & div {
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+
+      & span {
+        font-size: var(--text-h3);
+        font-weight: 600;
+      }
+    }
+
+    & button {
+      color: var(--text-main);
+    }
+  }
+
+  /* Estrutura da Tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-small);
+
+    /* Cabeçalho */
+    thead {
+      background-color: var(--border-color);
+
+      th {
+        padding: var(--s3) var(--s2);
+
+        color: var(--text-muted);
+        font-weight: 600;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.05em;
+
+        &:first-child {
+          text-align: left;
+          width: 80px;
+        }
+      }
+    }
+
+    /* Corpo da Tabela */
+    tbody {
+      tr {
+        border-bottom: 1px dashed var(--border-color);
+
+        &:nth-child(even) {
+          background-color: #ffffff04;
+        }
+
+        /* Coluna da hora (primeiro td de cada linha) */
+        td:first-child {
+          color: var(--text-muted);
+          font-weight: 500;
+          font-size: 0.8rem;
+          text-align: left;
+        }
+
+        /* Demais células (dias da semana) */
+        td {
+          margin: auto 0;
+          padding: 8px;
+          height: 56px;
+          text-align: center;
+          vertical-align: top;
+          border-right: 1px dashed var(--border-color);
+
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    gap: var(--s2);
+
+    span {
+      color: var(--text-main);
+      font-size: var(--text-small);
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+
+      span:first-child {
+        width: 12px;
+        height: 12px;
+
+        margin: auto 0;
+
+        border-radius: 50%;
+      }
+
+      span:last-child {
+        color: var(--text-muted);
+      }
+    }
+  }
+}
