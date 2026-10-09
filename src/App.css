@@ -1,16 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --bg-dark: #121214;
-  --bg-sidebar: #0a0a0c;
-  --bg-card: #1a1a22;
+  /* CORES DO BACKGROUND */
+  --bg-main: #0b0e17;
+  --bg-sidebar: #101422;
+  --bg-surface: #161b2e;
+  --bg-card: #20273d;
+  --border: #2a324a;
 
+  /* CORES DESTAQUE */
+  --accent-blue: #3b82f6;
+  --accent-blue-hover: #2563eb;
+
+  /* CORES DO TEXTO */
   --text-main: #ffffff;
-  --text-muted: #8a8a98;
+  --text-muted: #9ca3af;
 
-  --accent-color: #5865f2;
-  --accent-hover: #4752c4;
-  --border-color: #262630;
+  /* PINOS & MARCAÇÕES DE PRIORIDADE */
+  --color1: #ef4444;
+  --color2: #f99d17;
+  --color3: #f5de0b;
+  --color4: #54b740;
+  --color5: #3857e0;
+  --color6: #9f69f4;
 
   /*Tipografia*/
   --text-small: 0.75rem;
@@ -20,16 +32,17 @@
   --text-h1: 2rem;
   --text-display: 2.5rem;
 
-  --font: "Courier New", Courier, monospace;
+  --font: "Inter", Courier, monospace;
 
   /*Espaçamentos*/
   --s1: 0.25rem; /*4*/
   --s2: 0.5rem; /*8*/
-  --s3: 1rem; /*16*/
-  --s4: 1.5rem; /*24*/
-  --s5: 2rem; /*32*/
-  --s6: 3rem; /*48*/
-  --s7: 4rem; /*64*/
+  --s3: 0.75rem; /*12*/
+  --s4: 1rem; /*16*/
+  --s5: 1.5rem; /*24*/
+  --s6: 2rem; /*32*/
+  --s7: 3rem; /*48*/
+  --s8: 4rem; /*64*/
 }
 
 * {
@@ -37,7 +50,7 @@
   padding: 0;
   box-sizing: border-box;
 
-  font-family: "Inter", sans-serif;
+  font-family: var(--font);
 
   transition: all 0.3s;
 }
@@ -57,7 +70,7 @@ body {
 
   height: 100vh;
 
-  background-color: #000;
+  background-color: var(--bg-main);
 }
 
 #root {

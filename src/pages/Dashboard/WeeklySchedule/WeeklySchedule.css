@@ -4,9 +4,9 @@
   gap: var(--s4);
   padding: var(--s4);
 
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--s3);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--s2);
 
   color: var(--text-main);
   overflow-x: auto;
@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border);
 
     & div {
       display: flex;
@@ -42,7 +42,7 @@
 
     /* Cabeçalho */
     thead {
-      background-color: var(--border-color);
+      background-color: var(--border);
 
       th {
         padding: var(--s3) var(--s2);
@@ -63,10 +63,10 @@
     /* Corpo da Tabela */
     tbody {
       tr {
-        border-bottom: 1px dashed var(--border-color);
+        border-bottom: 1px dashed var(--border);
 
         &:nth-child(even) {
-          background-color: #ffffff04;
+          background-color: var(--bg-card);
         }
 
         /* Coluna da hora (primeiro td de cada linha) */
@@ -84,7 +84,7 @@
           height: 56px;
           text-align: center;
           vertical-align: top;
-          border-right: 1px dashed var(--border-color);
+          border-right: 1px dashed var(--border);
 
           &:last-child {
             border-right: none;

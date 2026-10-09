@@ -34,57 +34,57 @@ export default function WeeklySchedule() {
         <tbody>
           <tr>
             <td>08:00</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
 
           <tr>
             <td>08:00</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
 
           <tr>
             <td>08:00</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
 
           <tr>
             <td>08:00</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
 
           <tr>
             <td>08:00</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
-            <td>teste</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
         </tbody>
       </table>
@@ -95,7 +95,7 @@ export default function WeeklySchedule() {
         <div>
           <span
             style={{
-              backgroundColor: "green",
+              backgroundColor: "var(--color4)",
             }}
           ></span>
           <span>Baixa</span>
@@ -104,7 +104,7 @@ export default function WeeklySchedule() {
         <div>
           <span
             style={{
-              backgroundColor: "yellow",
+              backgroundColor: "var(--color3)",
             }}
           ></span>
           <span>Média</span>
@@ -113,7 +113,7 @@ export default function WeeklySchedule() {
         <div>
           <span
             style={{
-              backgroundColor: "red",
+              backgroundColor: "var(--color1)",
             }}
           ></span>
 
@@ -123,7 +123,7 @@ export default function WeeklySchedule() {
         <div>
           <span
             style={{
-              backgroundColor: "blue",
+              backgroundColor: "var(--color5)",
             }}
           ></span>
 

@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
 
-  background-color: var(--bg-dark);
+  background-color: var(--bg-main);
 
   overflow: hidden;
 
@@ -15,27 +15,27 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: var(--s4);
+    gap: var(--s6);
 
     width: fit-content;
     padding: var(--s4) var(--s3);
 
     background-color: var(--bg-sidebar);
-    border-right: 1px solid var(--border-color);
+    border-right: 1px solid var(--border);
 
     & .collapse-button {
       position: absolute;
       right: -9px;
-      top: 0;
+      top: 4px;
 
-      padding: var(--s1) 0;
+      padding: var(--s2) 0;
       margin-top: var(--s4);
 
       background-color: var(--bg-sidebar);
-      border: 1px solid var(--border-color);
+      border: 1px solid var(--border);
       border-radius: var(--s1);
 
-      color: var(--border-color);
+      color: var(--text-main);
 
       &:hover {
         background-color: var(--bg-card);
@@ -43,14 +43,14 @@
       }
 
       & span {
-        font-size: 16px;
+        font-size: var(--text-body);
       }
     }
 
     & > div {
       display: flex;
       align-items: center;
-      gap: var(--s3);
+      gap: var(--s2);
 
       width: 100%;
       padding: var(--s2);
@@ -79,12 +79,12 @@
       & button {
         display: flex;
         align-items: center;
-        gap: var(--s3);
+        gap: var(--s2);
 
         width: 100%;
         padding: var(--s2);
 
-        border-radius: 8px;
+        border-radius: var(--s2);
 
         color: var(--text-muted);
         font-size: var(--text-small);
@@ -104,11 +104,11 @@
         }
 
         &.active {
-          background-color: #ffffff;
-          color: #000000;
+          background-color: var(--text-main);
+          color: var(--bg-main);
 
           & span {
-            color: #000000;
+            color: var(--bg-main);
           }
         }
 
@@ -120,6 +120,7 @@
   }
 
   & > aside.collapsed {
+
     & .span-colapsed {
       display: none;
     }
@@ -143,7 +144,7 @@
       padding: var(--s4);
 
       background-color: var(--bg-sidebar);
-      border-bottom: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border);
 
       color: var(--text-main);
       font-size: var(--text-h3);
@@ -154,10 +155,10 @@
         gap: var(--s2);
 
         & button {
-          padding: var(--s1);
+          padding: var(--s2);
 
           background-color: transparent;
-          border-radius: var(--s1);
+          border-radius: var(--s2);
 
           color: var(--text-muted);
 
@@ -187,6 +188,8 @@
       flex: 1;
 
       padding: var(--s4);
+
+      overflow-y: auto;
     }
   }
 }
