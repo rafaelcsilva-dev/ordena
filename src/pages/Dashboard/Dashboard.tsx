@@ -1,7 +1,7 @@
 import "./Dashboard.css";
 
 import InDevelopment from "../../components/InDevelopment/InDevelopment";
-import WeeklySchedule from "./WeeklySchedule/WeeklySchedule";
+
 
 export default function Dashboard() {
   return (
@@ -38,7 +38,7 @@ export default function Dashboard() {
         </div>
       </header>
 
-      <WeeklySchedule />
+    
     </section>
   );
 }
