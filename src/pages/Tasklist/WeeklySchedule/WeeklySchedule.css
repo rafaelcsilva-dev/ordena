@@ -1,7 +1,10 @@
 .weekly-schedule {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: var(--s4);
+
+  height: 100%;
   padding: var(--s4);
 
   background-color: var(--bg-surface);
@@ -34,11 +37,13 @@
     }
   }
 
-  /* Estrutura da Tabela */
   table {
+    flex: 1;
     width: 100%;
     border-collapse: collapse;
     font-size: var(--text-small);
+
+    overflow-y: auto;
 
     /* Cabeçalho */
     thead {
@@ -54,7 +59,7 @@
         letter-spacing: 0.05em;
 
         &:first-child {
-          text-align: left;
+          text-align: center;
           width: 80px;
         }
       }
@@ -74,21 +79,58 @@
           color: var(--text-muted);
           font-weight: 500;
           font-size: 0.8rem;
-          text-align: left;
+          text-align: center;
         }
 
         /* Demais células (dias da semana) */
         td {
-          margin: auto 0;
-          padding: 8px;
           height: 56px;
+          margin: auto;
+          padding: var(--s1);
+
           text-align: center;
-          vertical-align: top;
+
           border-right: 1px dashed var(--border);
 
-          &:last-child {
-            border-right: none;
+          &:hover {
+            background-color: #ffffff1e;
           }
+        }
+
+        .task {
+          height: 100%;
+          padding: var(--s2);
+
+          background-color: #ffffff11;
+          border-left: var(--s1) solid var(--text-muted);
+
+          color: var(--text-main);
+          text-align: left;
+          font-weight: 500;
+
+          cursor: pointer;
+
+          &:hover {
+            opacity: 80%;
+          }
+        }
+
+        .task.alta {
+          border-color: var(--color1);
+          background-color: var(--hover1);
+          color: var(--color1);
+        }
+
+        .task.média {
+          border-color: var(--color3);
+          background-color: var(--hover3);
+          color: var(--color3);
+        }
+
+        .task.baixa {
+          border-color: var(--color4);
+          background-color: var(--hover4);
+          color: var(--color4);
         }
       }
     }

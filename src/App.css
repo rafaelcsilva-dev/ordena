@@ -24,6 +24,13 @@
   --color5: #3857e0;
   --color6: #9f69f4;
 
+  --hover1: #ef444425;
+  --hover2: #f99d1725;
+  --hover3: #f5de0b25;
+  --hover4: #54b74025;
+  --hover5: #3857e025;
+  --hover6: #9f69f425;
+
   /*Tipografia*/
   --text-small: 0.75rem;
   --text-body: 1rem;
