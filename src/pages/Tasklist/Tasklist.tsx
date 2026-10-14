@@ -1,4 +1,4 @@
-import InDevelopment from "../../components/InDevelopment/InDevelopment";
+//import InDevelopment from "../../components/InDevelopment/InDevelopment";
 
 import WeeklySchedule from "../Tasklist/WeeklySchedule/WeeklySchedule";
 
