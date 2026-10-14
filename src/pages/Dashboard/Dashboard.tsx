@@ -1,6 +1,6 @@
 import "./Dashboard.css";
 
-import InDevelopment from "../../components/InDevelopment/InDevelopment";
+//import InDevelopment from "../../components/InDevelopment/InDevelopment";
 
 
 export default function Dashboard() {

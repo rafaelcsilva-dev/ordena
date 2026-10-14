@@ -1,6 +1,7 @@
+import { useState } from "react";
 import "./WeeklySchedule.css";
 import Icon from "../../../components/Icon/Icon";
-import { tasks, type Task } from "../../../data/tasks"; // Importa os dados e a interface Task
+import { tasks as initialTasks, type Task } from "../../../data/tasks";
 
 interface DayInfo {
   label: string;
@@ -8,6 +9,12 @@ interface DayInfo {
 }
 
 export default function WeeklySchedule() {
+  // 1. Estado para gerir e atualizar as tarefas dinamicamente
+  const [taskList, setTaskList] = useState<Task[]>(initialTasks);
+
+  // 2. Estado para guardar a tarefa selecionada para ser movida
+  const [selectedTask, setSelectedTask] = useState<Task | null>(null);
+
   // Função que gera os 7 dias da semana dinamicamente
   const getDaysOfWeek = (currentDate = new Date()): DayInfo[] => {
     const date = new Date(currentDate);
@@ -36,10 +43,44 @@ export default function WeeklySchedule() {
 
   const weekDays = getDaysOfWeek();
 
-  // Tipando explicitamente o map para o TypeScript saber que 't' é do tipo Task
+  // Extrai os horários únicos ordenados com base no estado atual das tarefas
   const setTime: string[] = Array.from(
-    new Set(tasks.map((t: Task) => t.startTime)),
+    new Set(taskList.map((t: Task) => t.startTime)),
   ).sort();
+
+  // 3. Move a tarefa selecionada para a nova célula clicada (bloqueando sobreposição)
+  const handleCellClick = (date: string, time: string) => {
+    if (selectedTask) {
+      // Verifica se já existe alguma tarefa na célula de destino
+      const taskInTarget = taskList.find(
+        (t: Task) => t.date === date && t.startTime === time,
+      );
+
+      // Se já houver uma tarefa lá, impede a sobreposição
+      if (taskInTarget) {
+        alert("Já existe uma tarefa neste horário e dia!");
+        return;
+      }
+
+      // Caso contrário, move normalmente
+      setTaskList((prev) =>
+        prev.map((t) =>
+          t.id === selectedTask.id ? { ...t, date: date, startTime: time } : t,
+        ),
+      );
+      setSelectedTask(null);
+    }
+  };
+
+  // 4. Seleciona ou desseleciona uma tarefa
+  const handleTaskClick = (e: React.MouseEvent, task: Task) => {
+    e.stopPropagation(); // Evita ativar o clique da célula pai
+    if (selectedTask?.id === task.id) {
+      setSelectedTask(null); // Desseleciona se for a mesma
+    } else {
+      setSelectedTask(task); // Seleciona a nova tarefa
+    }
+  };
 
   return (
     <div className="weekly-schedule">
@@ -81,14 +122,23 @@ export default function WeeklySchedule() {
               <tr key={time}>
                 <td>{time}</td>
                 {weekDays.map((day) => {
-                  const taskFound = tasks.find(
+                  const taskFound = taskList.find(
                     (t: Task) => t.date === day.date && t.startTime === time,
                   );
 
+                  const isSelected = selectedTask?.id === taskFound?.id;
+
                   return (
-                    <td key={day.date}>
+                    <td
+                      key={day.date}
+                      onClick={() => handleCellClick(day.date, time)}
+                      style={{ cursor: selectedTask ? "pointer" : "default" }}
+                    >
                       {taskFound ? (
-                        <div className={`task ${taskFound.priority}`}>
+                        <div
+                          className={`task ${taskFound.priority} ${isSelected ? "selected" : ""}`}
+                          onClick={(e) => handleTaskClick(e, taskFound)}
+                        >
                           <span>{taskFound.title}</span>
                         </div>
                       ) : (

@@ -132,6 +132,10 @@
           background-color: var(--hover4);
           color: var(--color4);
         }
+
+        .selected {
+          border: 2px dashed;
+        }
       }
     }
   }
